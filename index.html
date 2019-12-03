@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		padding: 0;
+		margin: 0;
+	}
+	h1{
+		color:#4599bb;
+		font-size: 10vh;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;		
+	}
+	#baner{
+		/*background-color: #F5F2F0;*/
+		/*background-image: linear-gradient(#E5E2E0, #D1D3DF);*/
+		background-color: rgba(0,0,0,0);
+		font-family: 'Odibee Sans', cursive;
+		text-align: center;
+		padding: 10px;
+  		height: 25vh;
+  		position: fixed;
+		top: 0;
+		width: 100%;
+	}	
+	#baner > p{
+		color: #38a;
+		font-size: 6vh;
+		text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;	
+	}
+	#main-content{
+		/*background-color: #D1D3D4;*/
+		background-image: url(background.jpg);
+		height: 100vh;
+		padding: 30px;
+		font-size: 5vh;
+		font-family: 'Odibee Sans', cursive;
+		text-align: center;
+		color: #004156;
+		padding-top: 50vh;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;	
+	}
+	@media (max-width: 600px) {
+		#baner > p{
+			font-size: 5vw;
+		}
+		h1{
+			font-size: 8vw;
+		}
+	}
+</style>
+<meta charset="UTF-8"/>
+</head>
+<body>
+	<div id="main-container">
+		<div id="baner">
+			<h1>Jason Moraes welcomes You, honey.</h1>
+			<p>I'm so proud to introduce myself to You.</p>
+		</div>
+		<div id="main-content">
+				<p class="animated bounce infinite">Here I will upload some infomation about myself, so stay tuned, breathtaking one.</p>
+		</div>
+	</div>
+</body>
+</html>
