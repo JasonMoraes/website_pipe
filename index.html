@@ -8,51 +8,115 @@
 <style>
 	*{
 		box-sizing: border-box;
+		color: beige;
 	}
 	body{
 		padding: 0;
 		margin: 0;
+		background-color: #222;
 	}
 	h1{
-		color:#4599bb;
-		font-size: 10vh;
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;		
+		/* color:#4599bb; */
+		font-size: 15vh;
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		padding-top:auto;		
 	}
 	#baner{
 		/*background-color: #F5F2F0;*/
 		/*background-image: linear-gradient(#E5E2E0, #D1D3DF);*/
-		background-color: rgba(0,0,0,0);
+		background-image: url(background.jpg);
+		background-size: cover;
+
 		font-family: 'Odibee Sans', cursive;
 		text-align: center;
 		padding: 10px;
-  		height: 25vh;
-  		position: fixed;
-		top: 0;
+  		height: 100vh;
 		width: 100%;
 	}	
 	#baner > p{
-		color: #38a;
-		font-size: 6vh;
-		text-shadow: -0.5px 0 white, 0 0.5px white, 0.5px 0 white, 0 -0.5px white;	
+		/* color: #38a; */
+		font-size: 10vh;
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
+		filter: none;
+		-webkit-filter: none;
+			
 	}
 	#main-content{
-		/*background-color: #D1D3D4;*/
-		background-image: url(background.jpg);
-		height: 100vh;
-		padding: 30px;
+		/* background-image: url(background.jpg); */
 		font-size: 5vh;
 		font-family: 'Odibee Sans', cursive;
 		text-align: center;
-		color: #004156;
-		padding-top: 50vh;
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;	
+		/* color: #004156; */
+			/* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;	 */
 	}
-	@media (max-width: 600px) {
+	section{
+		height: 100vh;
+		padding-top: 5vh;
+	}
+	section > p{
+		font-size: 1em;
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		text-align: center;
+	}
+	section > h2{
+		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	}
+	.section-left{
+		float:left;
+		padding:5vh;
+		width:50%;
+		vertical-align: middle;
+	}
+	.section-right{
+		float:right;
+		text-align: left;
+		width: 50%;
+		z-index: 3;
+		position: relative;
+		top: 0;
+	}
+	.section-right > p.bottom{
+		position: absolute;
+		top: 40vh;
+		left: -2vw;
+	}
+	.section-image{
+		height: 50vh;
+		width:auto;
+		transform: skew(5deg) rotateX(10deg);
+		filter: drop-shadow(5px 60px 35px rgba(0, 0, 0, 0.8));
+	}
+	section#first{
+		background-image: linear-gradient(#703F44, #6f2e55);
+	}
+	section#second{
+		background-image: linear-gradient(#5a2a40, #3a0a23);
+	}
+	@media (max-width: 500px) {
 		#baner > p{
-			font-size: 5vw;
+			font-size: 10vw;
 		}
 		h1{
-			font-size: 8vw;
+			font-size: 12vw;
+		}
+		.section-image{
+			width: 80%;
+			height:auto;
+		}
+		img{
+			width:inherit;
+		}
+		p.bottom{
+			display: none;
+		}
+	}
+	@media (max-width: 1200px) {
+		.section-image{
+			width: 100%;
+			height:auto;
+		}
+		p.bottom{
+			display: none;
 		}
 	}
 </style>
@@ -61,11 +125,31 @@
 <body>
 	<div id="main-container">
 		<div id="baner">
-			<h1>Jason Moraes welcomes You, honey.</h1>
+			<h1>Jason Moraes welcomes You, homie.</h1>
 			<p>I'm so proud to introduce myself to You.</p>
 		</div>
 		<div id="main-content">
-				<p class="animated pulse infinite" style="box-sizing: border-box !important;">Here I will upload some infomation about myself, so stay tuned, breathtaking one.</p>
+			<section id="first">
+				<h2>Yes, I know you're curious! So, who am I?</h2>
+				<p><i>It's simple. I'm a genius.</i></p>
+				<div class="section-left">
+					<img src="./portrait.jpg" alt="That's not even me!" class="section-image"/>
+				</div>
+				<div class="section-right">
+					<br/>
+					<p>When you finish reading this website, you will understand.</p>
+					<p>BTW Kamil Naglik is a good guy.</p>
+					<p class="bottom">And THAT... That's not even me...</p>
+				</div>
+			</section>
+			<section id="second">
+				<h2>First things first, my dear.</h2>
+				<p><i>A subtitle without a need is a waste indeed.</i></p>
+				<br/>
+				<p><b>I'm an IT technician.</b></p>
+				<p>Seriously.</p>
+				<p>IT Technician. Nothing more. Theoretically.</p>
+			</section>
 		</div>
 	</div>
 </body>
