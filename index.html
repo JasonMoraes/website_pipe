@@ -5,132 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-<style>
-	*{
-		box-sizing: border-box;
-		color: beige;
-	}
-	body{
-		padding: 0;
-		margin: 0;
-		background-color: #222;
-	}
-	h1{
-		/* color:#4599bb; */
-		font-size: 15vh;
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-		padding-top:auto;		
-	}
-	#baner{
-		/*background-color: #F5F2F0;*/
-		/*background-image: linear-gradient(#E5E2E0, #D1D3DF);*/
-		background-image: url(background.jpg);
-		background-size: cover;
-
-		font-family: 'Odibee Sans', cursive;
-		text-align: center;
-		padding: 10px;
-  		height: 100vh;
-		width: 100%;
-	}	
-	#baner > p{
-		/* color: #38a; */
-		font-size: 10vh;
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 1px black;
-		filter: none;
-		-webkit-filter: none;
-			
-	}
-	#main-content{
-		/* background-image: url(background.jpg); */
-		font-size: 5vh;
-		font-family: 'Odibee Sans', cursive;
-		text-align: center;
-		/* color: #004156; */
-			/* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;	 */
-	}
-	section{
-		height: 100vh;
-		padding-top: 5vh;
-	}
-	section > p{
-		font-size: 1em;
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-		text-align: center;
-	}
-	section > h2{
-		text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-	}
-	.section-left{
-		float:left;
-		padding:5vh;
-		width:50%;
-		vertical-align: middle;
-	}
-	.section-right{
-		float:right;
-		text-align: left;
-		width: 50%;
-		z-index: 3;
-		position: relative;
-		top: 0;
-	}
-	.section-right > p.bottom{
-		position: absolute;
-		top: 40vh;
-		left: -2vw;
-	}
-	.section-image{
-		height: 50vh;
-		width:auto;
-		transform: skew(5deg) rotateX(10deg);
-		filter: drop-shadow(5px 60px 35px rgba(0, 0, 0, 0.8));
-	}
-	section#first{
-		background-image: linear-gradient(#703F44, #6f2e55);
-	}
-	section#second{
-		background-image: linear-gradient(#5a2a40, #3a0a23);
-	}
-	@media (max-width: 500px) {
-		#baner > p{
-			font-size: 10vw;
-		}
-		h1{
-			font-size: 12vw;
-		}
-		.section-image{
-			width: 80%;
-			height:auto;
-		}
-		img{
-			width:inherit;
-		}
-		p.bottom{
-			display: none;
-		}
-	}
-	@media (max-width: 1200px) {
-		.section-image{
-			width: 100%;
-			height:auto;
-		}
-		p.bottom{
-			display: none;
-		}
-	}
-</style>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="./style.css">
 <meta charset="UTF-8"/>
 </head>
 <body>
-	<div id="main-container">
+	<main>
 		<div id="baner">
 			<h1>Jason Moraes welcomes You, homie.</h1>
 			<p>I'm so proud to introduce myself to You.</p>
+			<div class="spinning-arrow"></div>
+			<div class="spinning-arrow"></div>
 		</div>
 		<div id="main-content">
 			<section id="first">
-				<h2>Yes, I know you're curious! So, who am I?</h2>
+				<header>Yes, I know you're curious! So, who am I?</header>
 				<p><i>It's simple. I'm a genius.</i></p>
 				<div class="section-left">
 					<img src="./portrait.jpg" alt="That's not even me!" class="section-image"/>
@@ -143,14 +32,47 @@
 				</div>
 			</section>
 			<section id="second">
-				<h2>First things first, my dear.</h2>
+				<header>First things first, my dear.</header>
 				<p><i>A subtitle without a need is a waste indeed.</i></p>
 				<br/>
 				<p><b>I'm an IT technician.</b></p>
 				<p>Seriously.</p>
 				<p>IT Technician. Nothing more. Theoretically.</p>
 			</section>
+			<section id="third">
+				<header>My passions?</header>
+				<p><i>You'd better pay attention now.</i></p>
+				<div class="widget-container">
+					<div class="widget">
+						<p>RolePlaying Games</p>
+					</div>
+					<div class="widget">
+						<p>Fantasy</p>	
+					</div>
+					<div class="widget">
+						<p>Technology</p>
+					</div>
+					<div class="widget">
+						<p>Football</p>		
+					</div>
+				</div>	
+			</section>
 		</div>
-	</div>
-</body>
+	</main>
+	<!-- <script>
+		var widget = document.getElementsByClassName("widget");
+		var sign = "";
+		for (var i = 0; i<widget.length; i++){
+			widget[i].style.transform = "skewY("+sign+"3deg)";
+			if (sign=="-"){
+				sign = "";
+			}
+			else sign = "-";
+		} 
+	</script> -->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  	<script>
+  		AOS.init();
+	  </script>
+	 </body>
 </html>
